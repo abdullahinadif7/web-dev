@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lato&family=Magra:wght@700&family=Roboto&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="shared-container">
+
+        <div id="navbar-container" class="sharing-item">
+            
+            <form action="/submit" method="POST" id="form">
+                <input type="text" id="city-field" name="city" placeholder="Search for city" class="form-item styled-font">
+                <button type="submit" class="form-item styled-font" id="search-btn">
+                    search 
+                </button> 
+            </form>
+            
+        </div>
+    <% if(locals.content && locals.content.location){ %>
+        <div class="sharing-item" id="weather-area" style="background-image: url('/images/<%= content.backgroundImage%>'); background-size: cover; background-repeat: no-repeat;">
+            
+            <h1 class="styled-font"><%= content.location %></h1>
+        
+            <div id="weather-content-container">
+
+                <div id="weather-info" class="weather-content-item">
+                    <p class="weather-info-item styled-font"> <%= content.weekDay %> <%= content.dateTime %>, <%= content.currentTime %></p>
+                    <h2 class="weather-info-item styled-font"><%= content.celsiusDeg %> | <%= content.fehrenheitDeg %></h2>
+
+                    <div class="weather-info-item">
+                        <h3 class="styled-font"><%= content.weatherCondition %></h3>
+                        <p class="styled-font">Humidity: <%= content.humidity %>%</p>
+                        <p class="styled-font">Wind Speed: <%= content.windSpeed %> </p>
+                    </div>
+                </div>
+
+                <div id="weather-icon" class="weather-content-item"> 
+                    <h3 class="styled-font"><%= content.weatherCondition %></h3>
+                    <img src="<%=content.icon%>" alt="icon" height="200" width="200">
+                </div>
+
+            </div>
+                
+            
+        </div>
+
+    <% } else if(locals.content) { %>
+        <h1><%= content %></h1>
+    <% } %>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

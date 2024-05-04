@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#shared-container{
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center; 
+    
+}
+
+.sharing-item{
+    width: 90vw;
+    margin-top: 10px;
+   padding: 10px;
+}
+
+#navbar-container{
+    background-color: #8644A2;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); */
+    
+}
+
+#form{
+    
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-item{
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#city-field{
+    /* background-color: brown; */
+    width: 60%;
+    color: black;
+}
+
+#search-btn{
+    color: black;
+}
+
+#city-field:focus{
+    outline: 0;
+    
+}
+
+
+#weather-area{
+    height: 80%;
+    background-color: #8644A2;
+}
+
+h1{
+    margin: 10px;
+    text-align: center;
+}
+
+#weather-content-container{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#weather-info{
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    
+}
+
+p{
+    margin-top: 10px;
+}
+
+.styled-font{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
