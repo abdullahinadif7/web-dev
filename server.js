@@ -115,7 +115,8 @@ app.post("/submit", async (req, res)=>{
             windSpeed: `${response2.data.wind.speed} m/s`,
             icon: `http://openweathermap.org/img/wn/${response2.data.weather[0].icon}.png`,
             currentTime: currentTime,
-            backgroundImage: backgroundImage
+            backgroundImage: backgroundImage,
+            year: date.getFullYear()
         };
         
         //passing the object containing the data we need to render to the ejs template, which 

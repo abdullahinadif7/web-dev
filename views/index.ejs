@@ -38,12 +38,13 @@
                         <h3 class="styled-font"><%= content.weatherCondition %></h3>
                         <p class="styled-font">Humidity: <%= content.humidity %>%</p>
                         <p class="styled-font">Wind Speed: <%= content.windSpeed %> </p>
+                        <p class="styled-font" id="copy-right">&copy; <%= content.year %> Coded by <em>Abdullahi Nadif Aden. </em>All rights reserved.</p>
                     </div>
                 </div>
 
                 <div id="weather-icon" class="weather-content-item"> 
                     <h3 class="styled-font"><%= content.weatherCondition %></h3>
-                    <img src="<%=content.icon%>" alt="icon" height="200" width="200">
+                    <img src="<%=content.icon%>" alt="icon" height="200" width="200" >
                 </div>
 
             </div>
