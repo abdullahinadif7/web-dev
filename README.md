@@ -26,4 +26,3 @@ This screenshot shows the search functionality of the website, where users can e
 ![Screenshot of Website](website-screenshot.png)
 This screenshot provides a preview of the website interface, displaying the rendered weather information for the searched city.
 
-
